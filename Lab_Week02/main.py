@@ -50,6 +50,9 @@ class SinglyLinkedList:
         if (self.count == 0):
             self.head = new_node
             self.count += 1
+        elif self.head.name == target:
+            new_node.next = self.head
+            self.head = new_node
         else:
             prev_node, current_node = None, self.head
             while current_node != None:
@@ -79,13 +82,14 @@ class SinglyLinkedList:
 
 def main():
     mylist = SinglyLinkedList()
-    mylist.insertLast("John")
-    mylist.insertLast("Tony")
-    mylist.insertFront("Bill")
+    mylist.insertFront("Dog")
+    mylist.insertLast("Cat")
+    mylist.insertBefore("Cat", "Bird")
     mylist.traverse()
-    mylist.insertBefore("Tony", "Kim")
+    mylist.insertBefore("Dog", "Fish")
+    mylist.delete("Cat")
     mylist.traverse()
-    mylist.delete("John")
+    mylist.insertBefore("Ant", "Duck")
     mylist.traverse()
 
 
