@@ -6,7 +6,7 @@ s2 = Student(65070077, "Somsak Jaidee", 2.78)
 s3 = Student(65070021, "Somsri Jaiyai", 3.44)
 s4 = Student(65070042, "Sommai Meeboon", 2.89)
 
-myHash = ProbHash(20)
+myHash = ProbHash(3)
 myHash.insertData(s1)
 myHash.insertData(s2)
 myHash.insertData(s3)
